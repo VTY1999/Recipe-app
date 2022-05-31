@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: [:new, :create]
   end
   resources :public_recipes, only: [:public_recipes]
+  resources :shopping_list, only: [:shopping_list]
 end
