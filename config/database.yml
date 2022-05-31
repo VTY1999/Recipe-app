@@ -38,6 +38,6 @@ test:
 production:
   <<: *default
   database: Recipeapp_production
-  username: Recipeapp
+  username: postgres
   host: localhost
   password: kandy
