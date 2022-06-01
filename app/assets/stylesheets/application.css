@@ -1,15 +1,83 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #272a31;
+  --secondary: #ec5242;
+  --terciary: #d3d3d3;
+  --brand: #d23228;
+  --success: #0d7d4d;
+  --info: #03c7e8;
+  --warning: #f0cc00;
+  --danger: #ab0d02;
+  --light: #f1ecea;
+  --dark: #00262b;
+  --white: #fff;
+  --lato-font: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--lato-font);
+  background: #0f033d;
+}
+
+.navbar {
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  margin: 23px;
+}
+
+.hd {
+  font-size: 35px;
+  padding-bottom: 6px;
+  text-align: center;
+  color: #fff;
+}
+
+.signin {
+  border-radius: 20px;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 14px;
+  background-color: #f9f7f6;
+  color: #29292b;
+  text-decoration: none;
+  text-align: center;
+  margin: 2%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.signin:hover {
+  background-color: #06c7ca;
+}
+
+.signup {
+  border-radius: 20px;
+  padding: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 14px;
+  background-color: #f9f7f6;
+  color: #29292b;
+  text-decoration: none;
+  text-align: center;
+  margin: 1%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup:hover {
+  background-color: #06c7ca;
+}
