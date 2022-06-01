@@ -1,1 +1,8 @@
-<h1>Reciper list</h1>
+<h1>Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+<%= link_to recipe.name.capitalize, recipe_path(recipe.id) %>
+	<%= recipe.description%>
+	<%= button_to 'remove', recipe_path(recipe.id), method: :delete %>
+	<br>
+<% end %>
