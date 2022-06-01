@@ -1,8 +1,13 @@
-<h1>Recipes</h1>
+<ul class="recipeContaine">
+  <h2>All Recipes</h1>
+  <% @recipe.each do |recipe|%>
+    <%= link_to recipe do %>
+      <ul class="">
+        <li class="recipeName">name:<%= recipe.name %></li>
+        <li class="recipePublic">description:<%= recipe.description %></li>
+        </ul>
+    <% end %>
+  <% end %>
+  <%= link_to 'Add a recipe', new_recipe_path, class: "" %>
 
-<% @recipes.each do |recipe| %>
-<%= link_to recipe.name.capitalize, recipe_path(recipe.id) %>
-	<%= recipe.description%>
-	<%= button_to 'remove', recipe_path(recipe.id), method: :delete %>
-	<br>
-<% end %>
+</ul>

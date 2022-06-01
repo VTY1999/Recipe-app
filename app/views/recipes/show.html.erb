@@ -1,28 +1,11 @@
-<h1><%= @recipe.name %></h1>
-
-<div>
-<p>Public: <%= @recipe.public %></p>
-<p>Preparation time: <%= @recipe.preparation_time %></p>
-<p>Cooking time: <%= @recipe.cooking_time %></p>
-<p><%= @recipe.description %></p>
-<%= button_to 'Add ingredient', '#' %>
-<hr>
-<table>
-    <tr>
-      <th>Food</th>
-      <th>Quantity</th>
-      <th>Value</th>
-      <th>Actions</th>
-		</tr>
-    <div>
-    <% @recipe_foods.each do |recipe_food| %>
-      <tr>
-        <td><%= recipe_food.food.name %></td>
-        <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
-        <td>$<%= recipe_food.food.price %></td>
-        <td><%= button_to 'Remove', '#' %></td>
-      </tr>
-    <% end %>
-    </div>
-</table>
-</div>
+<h1>Recipes details#show</h1>
+<ul class="">
+  <h1>Recipe details</h1>
+  <%= link_to "Back to recipes", recipes_index_path(id: @recipe.user_id), class: "" %>
+  <ul class="">
+    <li class="recipeName">Recipename:<%= @recipe.name %></li>
+    <li class="recipePrepTime">preparation_time:<%= @recipe.preparation_time %></li>
+    <li class="recipePublic">description:<%= @recipe.description %></li>
+    <li class="recipePublic">public?:<%= @recipe.public ? 'Yes' : 'No' %></li>
+  </ul>
+</ul>

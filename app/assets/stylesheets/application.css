@@ -24,21 +24,18 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--lato-font);
-  background: #0f033d;
 }
 
 .navbar {
-  display: flex;
-  padding: 10%;
-  flex-direction: column;
-  margin: 23px;
+  background: #034952;
+  padding: 2%;
+  text-align: center;
 }
 
 .hd {
   font-size: 35px;
-  padding-bottom: 6px;
-  text-align: center;
   color: #fff;
+  margin-bottom: 3%;
 }
 
 .signin {
@@ -51,11 +48,8 @@ body {
   color: #29292b;
   text-decoration: none;
   text-align: center;
-  margin: 2%;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
+  justify-content: center;
+  position: static;
 }
 
 .signin:hover {
@@ -72,12 +66,40 @@ body {
   color: #29292b;
   text-decoration: none;
   text-align: center;
-  margin: 1%;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .signup:hover {
   background-color: #06c7ca;
+}
+
+.regitration-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.field {
+  padding-top: 2%;
+  position: relative;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  line-height: 15px;
+}
+
+.actions {
+  position: relative;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-top: 2%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1%;
 }

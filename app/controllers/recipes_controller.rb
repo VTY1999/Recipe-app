@@ -1,19 +1,31 @@
 class RecipesController < ApplicationController
   def index
-    current_user = 1
-    @recipes = Recipe.where(['user_id = :id', { id: current_user.to_s }])
+    @recipe = Recipe.all
   end
 
   def show
     @recipe = Recipe.find(params[:id])
-    @recipe_foods = RecipeFood.where(['recipe_id = :id', { id: params[:id].to_s }])
   end
 
-  def new; end
-
-  def destroy
-    @recipe = Recipe.find(params[:id])
-    @recipe.destroy
-    redirect_to recipes_path
+  def new
+    @recipe = Recipe.new
   end
+
+  def create
+    @recipe = Recipe.new(recipe_params)
+    @recipe.user = current_user
+
+    if @recipe.save
+      redirect_to recipes_path(id: @recipe.user_id)
+      flash[:notice] = 'Recipe added successfully!'
+    else
+      render :new
+      flash[:alert] = 'Recipe not added'
+    end
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :preparation_time, :public, :description)
+  end
+  private :recipe_params
 end
