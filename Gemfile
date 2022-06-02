@@ -73,5 +73,5 @@ group :test do
 end
 
 gem 'devise'
+gem 'letter_opener'
 gem 'rubocop', '>= 1.0', '< 2.0'
-  gem 'letter_opener'
