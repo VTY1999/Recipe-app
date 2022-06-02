@@ -72,7 +72,7 @@ body {
   background-color: #06c7ca;
 }
 
-.regitration-header {
+.headers {
   display: flex;
   justify-content: center;
   margin-top: 5%;
@@ -82,6 +82,16 @@ body {
   padding-top: 2%;
   position: relative;
   display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  line-height: 15px;
+}
+
+.field1 {
+  padding-top: 2%;
+  display: grid;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
