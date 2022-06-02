@@ -36,6 +36,8 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price)
+    food_hash = params.require(:food).permit(:name, :measurement_unit, :price)
+    food_hash[:user] = current_user
+    food_hash
   end
 end
