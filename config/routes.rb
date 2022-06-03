@@ -9,25 +9,14 @@ Rails.application.routes.draw do
   get 'public_recipes', to: 'recipes#public_recipes'
 
   devise_for :users
+  resource :user
+  root "users#index"
 
- resources :foods, only: [:index, :show, :new, :create, :destroy]
+  resources :foods, only: [:index, :show, :new, :create, :destroy]
   resources :recipes, only: [:index, :show, :create, :new, :destroy] do
     resources :recipe_foods, only: [:new]
 
   end
+  resources :shop, only: [:index]
   resources :recipe_foods, only: [ :destroy, :create]
-
-
-  root "users#index"
-
-  resource :user
-
-  get 'foods/index' , to: 'foods#index'
-  get 'foods' , to: 'foods#index'
-  get 'foods/show' , to: 'foods#show'
-  get 'foods/new' , to: 'foods#new'
-  get 'foods/delete' , to: 'foods#delete'
-  get 'general_shopping_list' , to: 'foods#list'
-
-  resource :foods, only: [:index, :show, :new, :create]
 end

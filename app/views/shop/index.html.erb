@@ -1,0 +1,32 @@
+<div class = 'food-container'>
+  <h1 class= 'text-center mb-4'> Shopping List </h1>
+  <div class = 'container pt-3 d-flex justify-content-between col-10'>
+    <p>Amount of food items to buy: <%= @total_amount %></p>
+    <p>Total value of food needed: $<%= RecipeFood.total_value_of_food(current_user.id) %></p>
+  </div>
+
+  <table class="table table-striped table-hover mt-5">
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+    </tr>
+    <% @foods.each.with_index do |food| %>
+      <% if food.user_id == current_user.id %>
+          <tr>
+            <td> <%= food.name %></td>
+            <td>
+              <% recipe = RecipeFood.recipe_quantity(food.id) || 0 %>
+              <%if recipe != 0 %>
+                <%= recipe_value = recipe.quantity %>g
+              <%else%>
+                <%= recipe_value = recipe %>g
+              <%end%>
+            </td>
+            <td><%= recipe_value * food.price %>$</td>
+          </tr>
+      <%end%> 
+    <%end%>
+  </table>
+  </div>
+</div>

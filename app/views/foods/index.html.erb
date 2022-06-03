@@ -1,20 +1,20 @@
-<section class="Containe">
-  <%= link_to "Add Food", new_food_path, class: "links" %>
+<section class="food-container">
+  <%= link_to "Add Food", new_food_path, class: "btn btn-primary align-self-end food-btn" %>
   <%if @foods.present? %>
-    <table class="rec-all">
-      <tr class="food-ul">
-        <th>Food</th>
-        <th>Measurement Unit</th>
-        <th>Unit Price</th>
-        <th>Actions</th>
+    <table class="list-group border mx-0 mt-3">
+      <tr>
+        <th><b>Food</b></th>
+        <th><b>Measurement Unit</b></th>
+        <th><b>Price</b></th>
+        <th><b>Actions</b></th>
       </tr>
       <% @foods.each do | food | %>
-        <tr class="food-ul2">
+        <tr>
           <td class="col"><%= food.name %></td>
           <td class="col"><%= food.measurement_unit %></td>
           <td class="col"><%= food.price %></td>
           <td class="col">
-            <%= button_to "Delete", food_path(food), class: "D-btn2", method: :delete %>
+            <%= button_to "Delete", food_path(food), class: "btn btn-danger action-btn", method: :delete %>
           </td>
         </tr>
       <% end %>
