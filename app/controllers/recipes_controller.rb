@@ -27,15 +27,11 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    # @recipe = current_user.recipes.includes(:recipe_foods).find(params[:id])
-        # @recipe.destroy
-    # respond_to do |format|
-    #   format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
     @recipe = Recipe.destroy(params[:id])
     if @recipe.destroyed?
       redirect_to recipes_path
     else
-      render :new, alert:"Oops something went wrong!"
+      render :new, alert: 'Oops something went wrong!'
     end
   end
 
