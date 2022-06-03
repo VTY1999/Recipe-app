@@ -1,1 +1,10 @@
-<h1>Recipe details list</h1>
+<ul class="">
+  <h1 class= ''>Recipe details</h1>
+  <%= link_to "Back to recipes", recipes_index_path(id: @recipe.user_id), class: "center" %>
+  <ul class="rec-detail">
+    <li class=""><span>Recipename:</span>  <%= @recipe.name %></li>
+    <li class=""><span>preparation time:</span>  <%= @recipe.preparation_time %></li>
+    <li class=""><span>description:</span>  <%= @recipe.description %></li>
+    <li class=""><span>public?:</span>  <%= @recipe.public ? 'Yes' : 'No' %></li>
+  </ul>
+</ul>

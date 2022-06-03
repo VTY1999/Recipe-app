@@ -1,0 +1,16 @@
+<%= form_with(model: recipe_food) do |form| %>
+
+  <div class="">
+    <%= form.label :food %>
+      <%= form.select :food_id, @foods.collect { |food| [food.name, food.id] }, class: "food" %>
+  </div>
+
+  <div class="">
+    <%= form.label :quantity %><br />
+      <%= form.text_field :quantity, class: "form-control", type: "number", required: true, min: 1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

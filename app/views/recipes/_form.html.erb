@@ -1,0 +1,28 @@
+<%= form_with(model: @recipe) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+      <%= form.text_field :name, autofocus: true, class: 'form-control', required: true %>
+  </div>
+
+
+  <div class="field">
+      <%= form.label :preparation_time, class: "label" %>
+      <%= form.text_field :preparation_time, class: 'form-control', placeholder: "3 hours",required: true %>
+  </div>
+
+  <div class="field1">
+    <%= form.label :description, class: "label" %>
+      <%= form.text_area :description, class: 'form-control', required: true %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= form.check_box :public %>
+    <%= form.label :public, class: "checkbox" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn1" %>
+  </div>
+<% end %>
