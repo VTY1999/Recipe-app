@@ -1,6 +1,6 @@
 <ul class="">
-  <h1 class= ''>Recipe details</h1>
-  <%= link_to "Back to recipes", recipes_index_path(id: @recipe.user_id), class: "center" %>
+  <h1 class='headers'>Recipe details</h1>
+  <%= link_to "Back to recipes", recipes_index_path(id: @recipe.user_id), class: "links" %>
   <ul class="rec-detail">
     <li class=""><span>Recipename:</span>  <%= @recipe.name %></li>
     <li class=""><span>preparation time:</span>  <%= @recipe.preparation_time %></li>

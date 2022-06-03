@@ -1,17 +1,18 @@
 <ul class="recipeContaine">
-  <h2 class="center">All Recipes</h1>
+  <h2 class="headers">All Recipes</h1>
   <% @recipe.each do |recipe|%>
     <li class="rec-all">
-      <%= link_to recipe do %>
-          <ul class="recipe">
-            <li class=""><span>name: </span><%= recipe.name %></li>
-            <li class=""><span>description: </span><%= recipe.description %></li>
-          </ul>
+      <%= link_to recipe, class: "list" do %>
+          <ul class="text-ul">
+            <li class="">name: <%= recipe.name %></li>
+            <li class="">description: <%= recipe.description %></li>
+          
       <% end %>
       <% if can? :destroy, recipe %>
-            <%= button_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+            <li><%= button_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "D-btn" %></li>
       <% end %>
+      </ul>
     </li>
   <% end %>
-  <%= link_to 'Add a recipe', new_recipe_path, class: "new--rec" %>
+  <%= link_to 'Add a recipe', new_recipe_path, class: "links" %>
 </ul>
