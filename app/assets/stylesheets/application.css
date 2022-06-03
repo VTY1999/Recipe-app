@@ -27,7 +27,7 @@ body {
 }
 
 .navbar {
-  background: #034952;
+  background: #0a1a3e;
   padding: 2%;
   text-align: center;
 }
@@ -35,41 +35,71 @@ body {
 .hd {
   font-size: 35px;
   color: #fff;
-  margin-bottom: 3%;
+  text-decoration: none;
+  display: flex;
+  font-weight: bold;
 }
 
-.signin {
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+  gap: 13px;
+  margin-top: -30px;
+}
+
+.nav-item {
+  list-style: none;
+  border-right: 2px solid #fa0606;
+  padding-right: 15px;
+}
+
+.nav-item:last-of-type {
+  border-right: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-link:hover {
+  color: #06c7ca;
+}
+
+.btn {
+  border-radius: 20px;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 14px;
+  background-color: #f9f7f6;
+  color: #a6b2cb;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #cc1a13;
+}
+
+.btn1 {
   border-radius: 20px;
   padding: 1%;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 14px;
   background-color: #f9f7f6;
-  color: #29292b;
+  color: #a6b2cb;
   text-decoration: none;
-  text-align: center;
-  justify-content: center;
-  position: static;
+  border: 1px solid #a6b2cb;
 }
 
-.signin:hover {
-  background-color: #06c7ca;
-}
-
-.signup {
-  border-radius: 20px;
-  padding: 1%;
-  padding-left: 5%;
-  padding-right: 5%;
-  font-size: 14px;
-  background-color: #f9f7f6;
-  color: #29292b;
-  text-decoration: none;
-  text-align: center;
-}
-
-.signup:hover {
-  background-color: #06c7ca;
+.btn1:hover {
+  background-color: #06ca72;
 }
 
 .headers {
