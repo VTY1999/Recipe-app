@@ -2,7 +2,7 @@
 
 # Recipe App
 
-> Description the project.
+> Recipe app keeps track of all your recipes and ingredients. It allows you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 
 ## Built With
@@ -15,7 +15,7 @@
 
 - PostgreSQL
 
-- CSS & Sass
+- CSS
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -34,8 +34,8 @@ To get a local copy up and running follow these simple example steps.
 Clone this repository
 
 `git clone
-$ 
-$  `
+$ https://github.com/VTY1999/Recipe-app.git
+$ cd Recipe-app `
 
 # Run project
 
@@ -48,17 +48,17 @@ $  `
 
 # Authors
 
-👤 **Author1**
+👤 **Francis Verissimo**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/VTY1999)
+- Twitter: [@twitterhandle](https://twitter.com/verissimoty?s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/francis-o-verissimo/)
 
-👤 **Author2**
+👤 **Kamuntu kandi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Kandy-Peter](https://github.com/Kandy-Peter)
+- Twitter: [@Peter-Kandi](https://www.linkedin.com/in/kandi-peter-a49590212)
+- LinkedIn: [Kandi Peter](https://twitter.com/peter_kandy
 
 ## 🤝 Contributing
 
