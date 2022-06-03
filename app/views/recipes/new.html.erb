@@ -1,5 +1,9 @@
-<div class="">
+<div class="container">
+  <div class="mt-4">
 		<h1 class="headers">Add Recipe</h1>
-		<%= render 'form', recipe: @recipe %>
-		<%= link_to 'Back', url_for(:back), class: "button is-light mt-2" %>
+		<div class="">
+				<%= render 'form', recipe: @recipe %>
+		</div>
+		<%= link_to 'Back', url_for(:back), class: "actions" %>
 	</div>
+</div>

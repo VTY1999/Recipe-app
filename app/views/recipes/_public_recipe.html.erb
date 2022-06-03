@@ -1,0 +1,10 @@
+<div class="pub-rec">
+	<div class="pub-name">
+		<%= link_to truncate(public_recipe.name, length: 80), public_recipe, class: "" %>
+		<p class="">By:</span> <%= public_recipe.user.email %></p>
+	</div>
+	<div class="pub-tot">
+		<p class="pub-tot-p">Total food items: <%= public_recipe.total_items %></p>
+		<p class="pub-tot-p">Total price: $<%= public_recipe.total_price %></p>
+	</div>
+</div>
