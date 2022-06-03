@@ -1,10 +1,12 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @recipe = Recipe.all
+    @recipe = current_user.recipes
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.includes(:recipe_foods).find(params[:id])
   end
 
   def new
@@ -22,6 +24,18 @@ class RecipesController < ApplicationController
       render :new
       flash[:alert] = 'Recipe not added'
     end
+  end
+
+  def destroy
+    @recipe = current_user.recipes.includes(:recipe_foods).find(params[:id])
+    @recipe.destroy
+    respond_to do |format|
+      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+    end
+  end
+
+  def public_recipes
+    @recipes = Recipe.where('public = true').order(id: :desc).includes(:foods).includes(:user)
   end
 
   def recipe_params
