@@ -1,7 +1,15 @@
 <nav class="navbar">
-  <h3 class="hd">Recipeapp</h3>
+   <%= link_to "Recipe App", root_path, class: "hd" %>
   <% if user_signed_in? %>
-    <%= link_to "Home", root_path, class: "navLink" %>
+    <li>
+      <%= link_to "Recipes", recipes_path, class: "nav-link" %>
+    </li>
+    <li>
+      <%= link_to "Foods", foods_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item px-4">
+      <span>User: <%= current_user.name %></span>
+    </li>
     <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "navLink" %>
   <% else %>
     <%= link_to "Sign In", new_user_session_path, class: "signin" %>
