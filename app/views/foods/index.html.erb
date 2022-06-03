@@ -1,27 +1,27 @@
-<section class="d-flex flex-column container">
-  <%= link_to "Add Food", new_food_path, class: "btn btn-primary align-self-end" %>
+<section class="Containe">
+  <%= link_to "Add Food", new_food_path, class: "links" %>
   <%if @foods.present? %>
-    <ul class="list-group border mx-0 mt-3">
-      <li>
-        <div><b>Food</b></div>
-        <div><b>Measurement Unit</b></div>
-        <div><b>Price</b></div>
-        <div><b>Actions</b></div>
-      </li>
+    <table class="rec-all">
+      <tr class="food-ul">
+        <th>Food</th>
+        <th>Measurement Unit</th>
+        <th>Unit Price</th>
+        <th>Actions</th>
+      </tr>
       <% @foods.each do | food | %>
-        <li>
-          <div class="col"><%= food.name %></div>
-          <div class="col"><%= food.measurement_unit %></div>
-          <div class="col"><%= food.price %></div>
-          <div class="col">
-            <%= button_to "Delete", food_path(food), class: "btn btn-danger", method: :delete %>
-          </div>
-        </li>
+        <tr class="food-ul2">
+          <td class="col"><%= food.name %></td>
+          <td class="col"><%= food.measurement_unit %></td>
+          <td class="col"><%= food.price %></td>
+          <td class="col">
+            <%= button_to "Delete", food_path(food), class: "D-btn2", method: :delete %>
+          </td>
+        </tr>
       <% end %>
-    </ul>
+    </table>
   <% else %>
-    <div class="border-2">
-      <p class="bg-light text-center"> There is no food yet. You can add a new one!</p>
-    </div>
+    <th class="border-2">
+      <p class="links"> There is no food yet. You can add a new one!</p>
+    </th>
   <% end %>
 </section>
