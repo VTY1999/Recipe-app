@@ -1,0 +1,27 @@
+<nav class="navbar" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <%= link_to 'Recipe App', root_path, class: 'hd' %>
+      <div>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <%= link_to 'Public Recipe', public_recipes_path ,class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'General List', shop_index_path ,class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Foods', foods_path ,class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Recipes', recipes_path ,class: "nav-link" %>
+          </li>
+        
+      <% if user_signed_in? %>
+        <%= link_to 'Sign Out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn' %>
+       <% else %>
+        <%= link_to 'You are not logged in !', new_user_session_path, class: 'btn' %>
+      <% end %>
+      </ul>
+      </div>
+    </div>
+  </nav>

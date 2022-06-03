@@ -1,56 +1,64 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe App
 
-> Description the project.
+> Recipe app keeps track of all your recipes and ingredients. It allows you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
 
-## Live Demo (if available)
+- Rails
 
-[Live Demo Link](https://livedemo.com)
+- RSpec
 
+- PostgreSQL
+
+- CSS
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- A text editor(preferably Visual Studio Code)
 
-### Setup
+## Install
+- Git
+- Ruby
+- PostgreSQL
+- Node.js
+- `gem install rails`
 
-### Install
+## Usage
+Clone this repository
 
-### Usage
+`git clone
+$ https://github.com/VTY1999/Recipe-app.git
+$ cd Recipe-app `
 
-### Run tests
+# Run project
 
-### Deployment
+- bundle install
+- rails s
 
+# Run Test
 
+- `rspec spec/`
 
-## Authors
+# Authors
 
-👤 **Author1**
+👤 **Francis Verissimo**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/VTY1999)
+- Twitter: [@twitterhandle](https://twitter.com/verissimoty?s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/francis-o-verissimo/)
 
-👤 **Author2**
+👤 **Kamuntu kandi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Kandy-Peter](https://github.com/Kandy-Peter)
+- Twitter: [@Peter-Kandi](https://www.linkedin.com/in/kandi-peter-a49590212)
+- LinkedIn: [Kandi Peter](https://twitter.com/peter_kandy)
 
 ## 🤝 Contributing
 

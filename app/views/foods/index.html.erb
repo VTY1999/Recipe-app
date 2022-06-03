@@ -1,0 +1,27 @@
+<section class="food-container">
+  <%= link_to "Add Food", new_food_path, class: "btn btn-primary align-self-end food-btn" %>
+  <%if @foods.present? %>
+    <table class="list-group border mx-0 mt-3">
+      <tr>
+        <th><b>Food</b></th>
+        <th><b>Measurement Unit</b></th>
+        <th><b>Price</b></th>
+        <th><b>Actions</b></th>
+      </tr>
+      <% @foods.each do | food | %>
+        <tr>
+          <td class="col"><%= food.name %></td>
+          <td class="col"><%= food.measurement_unit %></td>
+          <td class="col"><%= food.price %></td>
+          <td class="col">
+            <%= button_to "Delete", food_path(food), class: "btn btn-danger action-btn", method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <th class="border-2">
+      <p class="links"> There is no food yet. You can add a new one!</p>
+    </th>
+  <% end %>
+</section>

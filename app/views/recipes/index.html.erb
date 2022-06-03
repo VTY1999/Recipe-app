@@ -1,0 +1,18 @@
+<ul class="recipeContaine">
+  <h2 class="headers">All Recipes</h1>
+  <% @recipe.each do |recipe|%>
+    <li class="rec-all">
+      <%= link_to recipe, class: "list" do %>
+          <ul class="text-ul">
+            <li class="">name: <%= recipe.name %></li>
+            <li class="">description: <%= recipe.description %></li>
+          
+      <% end %>
+      <% if can? :destroy, recipe %>
+            <li><%= button_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: "D-btn" %></li>
+      <% end %>
+      </ul>
+    </li>
+  <% end %>
+  <%= link_to 'Add a recipe', new_recipe_path, class: "links" %>
+</ul>
