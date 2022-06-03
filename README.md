@@ -1,44 +1,52 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe App
 
 > Description the project.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
 
-## Live Demo (if available)
+- Rails
 
-[Live Demo Link](https://livedemo.com)
+- RSpec
 
+- PostgreSQL
+
+- CSS & Sass
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- A text editor(preferably Visual Studio Code)
 
-### Setup
+## Install
+- Git
+- Ruby
+- PostgreSQL
+- Node.js
+- `gem install rails`
 
-### Install
+## Usage
+Clone this repository
 
-### Usage
+`git clone
+$ 
+$  `
 
-### Run tests
+# Run project
 
-### Deployment
+- bundle install
+- rails s
 
+# Run Test
 
+- `rspec spec/`
 
-## Authors
+# Authors
 
 👤 **Author1**
 
