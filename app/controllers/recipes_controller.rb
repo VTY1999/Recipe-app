@@ -31,10 +31,11 @@ class RecipesController < ApplicationController
         # @recipe.destroy
     # respond_to do |format|
     #   format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
-    @receipe = Recipe.destroy(params[:id])
-    if @recipe.destroyed? redirect_to recipes­_path
+    @recipe = Recipe.destroy(params[:id])
+    if @recipe.destroyed?
+      redirect_to recipes_path
     else
-      render :new alert:""
+      render :new, alert:"Oops something went wrong!"
     end
   end
 
