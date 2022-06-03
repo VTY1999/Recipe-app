@@ -58,7 +58,7 @@ $ cd Recipe-app `
 
 - GitHub: [@Kandy-Peter](https://github.com/Kandy-Peter)
 - Twitter: [@Peter-Kandi](https://www.linkedin.com/in/kandi-peter-a49590212)
-- LinkedIn: [Kandi Peter](https://twitter.com/peter_kandy
+- LinkedIn: [Kandi Peter](https://twitter.com/peter_kandy)
 
 ## 🤝 Contributing
 
